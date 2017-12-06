@@ -1,6 +1,5 @@
 package com.example.kevin.ibmchallenge;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.provider.MediaStore;
@@ -8,14 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.kevin.ibmchallenge.Models.Flight;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
     View[] flights = new View[4];
@@ -24,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) flights[i].findViewById(R.id.flight_date_number)).setText(flightData[i].getDepDayNum());
         }
 
-        expand(flights[0], true);
+        expand(flights[0], false);
         collapse(flights[1]);
         collapse(flights[2]);
         collapse(flights[3]);
@@ -63,18 +60,10 @@ public class MainActivity extends AppCompatActivity {
         ImageView expanderButton3 = (ImageView) flights[2].findViewById(R.id.expand_button);
         ImageView expanderButton4 = (ImageView) flights[3].findViewById(R.id.expand_button);
 
-        TextView rescheduleButton = (TextView) flights[0].findViewById(R.id.schedule_another_flight_notification);
-        rescheduleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dispatchTakePictureIntent();
-            }
-        });
-
         expanderButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                expand(flights[0],true);
+                expand(flights[0],false);
                 collapse(flights[1]);
                 collapse(flights[2]);
                 collapse(flights[3]);
@@ -135,13 +124,5 @@ public class MainActivity extends AppCompatActivity {
         v.findViewById(R.id.expand_button).setVisibility(View.VISIBLE);
         v.findViewById(R.id.delayed_notification).setVisibility(View.GONE);
         v.findViewById(R.id.schedule_another_flight_notification).setVisibility(View.GONE);
-    }
-
-    private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        takePictureIntent.putExtra("android.intent.extras.CAMERA_FACING", 1);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
     }
 }

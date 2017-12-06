@@ -43,17 +43,185 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/item1"
-                layout="@layout/flight_item" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF">
 
-            <include
+                <TextView
+                    android:id="@+id/flight_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Upcoming Flight"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/flight_month_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="December - Wednesday"
+                    android:textColor="#000000"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/flight_date_number"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_item_title" />
+
+                <TextView
+                    android:id="@+id/flight_date_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="6"
+                    android:textColor="#000000"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_item_title" />
+
+                <TextView
+                    android:id="@+id/flight_dep_to_dest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="SFO -> LAX"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/flight_month_day"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_month_day" />
+
+                <TextView
+                    android:id="@+id/fdsfdsffsdfsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Boarding Time:  1:30 PM"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fsdfdsfdsfsd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_date_number"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/fsdfdsfdsfsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Duration:  59 min"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fdsfdsffsdfsd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/fdsfdsffsdfsd"
+                    app:layout_constraintTop_toTopOf="@+id/fdsfdsffsdfsd" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/item2"
-                layout="@layout/flight_item" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF">
 
-            <include
-                android:id="@+id/item3"
-                layout="@layout/flight_item" />
+                <TextView
+                    android:id="@+id/flight_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Upcoming Flight"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/flight_month_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="December - Wednesday"
+                    android:textColor="#000000"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/nfdmfndmfd"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_item_title" />
+
+                <TextView
+                    android:id="@+id/nfdmfndmfd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="6"
+                    android:textColor="#000000"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_item_title" />
+
+                <TextView
+                    android:id="@+id/gfdgfdgfdgdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="SFO -> LAX"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/flight_month_day"
+                    app:layout_constraintTop_toBottomOf="@+id/flight_month_day" />
+
+                <TextView
+                    android:id="@+id/fdsfdsffsdfsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Boarding Time:  4:28 PM"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fsdfdsfdsfsd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nfdmfndmfd"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/fsdfdsfdsfsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Duration:  1 hr 2 min"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fdsfdsffsdfsd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/fdsfdsffsdfsd"
+                    app:layout_constraintTop_toTopOf="@+id/fdsfdsffsdfsd" />
+
+            </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
 
